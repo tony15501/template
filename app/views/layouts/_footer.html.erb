@@ -1,4 +1,6 @@
+ <% if @homes %>
  <!--=== Footer Version 1 ===-->
+ <% @homes.each do |p| %>
     <div class="footer-v1">
         <div class="footer">
             <div class="container">
@@ -6,8 +8,7 @@
                     <!-- About -->
                     <div class="col-md-3 md-margin-bottom-40">
                         <a href="index.html"><img class="footer-logo" src="/assets/logo2-default.png" alt=""></a>
-                        <p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.</p>
-                        <p>Duis eleifend fermentum ante ut aliquam. Cras mi risus, dignissim sed adipiscing ut, placerat non arcu.</p>    
+                        <p> <%= p.about %></p> 
                     </div><!--/col-md-3-->
                     <!-- End About -->
 
@@ -50,14 +51,16 @@
                     <div class="col-md-3 map-img md-margin-bottom-40">
                         <div class="headline"><h2>Contact Us</h2></div>                         
                         <address class="md-margin-bottom-40">
-                            25, Lorem Lis Street, Orange <br />
-                            California, US <br />
-                            Phone: 800 123 3456 <br />
-                            Fax: 800 123 3456 <br />
-                            Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
+                            <%= p.direccion %> <br />
+                            
+                            Phone: <%= p.telefono %><br />
+                            Fax: <%= p.fax %> <br />
+                            Email: <%= link_to p.email, root_path %>
                         </address>
                     </div><!--/col-md-3-->
                     <!-- End Address -->
                 </div>
             </div> 
-        </div><!--/footer-->
+        </div>
+        <% end %>
+        <% end %><!--/footer-->

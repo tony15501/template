@@ -1097,6 +1097,7 @@
 .footer p,
 .footer a {
 	font-size: 14px;
+	word-wrap: break-word;
 } 
 .footer p {
 	color: #dadada;

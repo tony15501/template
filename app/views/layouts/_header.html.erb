@@ -1,4 +1,6 @@
-<!--=== Style Switcher ===-->    
+<% if params[:action]== "index" %>
+<!--=== Style Switcher ===--> 
+<% @homes.each do |r| %>   
 <i class="style-switcher-btn fa fa-cogs hidden-xs"></i>
 <div class="style-switcher animated fadeInRight">
     <div class="theme-close"><i class="icon-close"></i></div>
@@ -48,7 +50,15 @@
                     <li class="topbar-devider"></li>   
                     <li><a href="page_faq.html">Help</a></li>  
                     <li class="topbar-devider"></li>   
-                    <li><a href="page_login.html">Login</a></li>   
+                    <li><%= link_to " LOGIN ADMIN", "/admin" %></li>
+                    
+                   <% if params[:controller]=="devise/sessions"%>
+                    <li class="topbar-devider"></li>
+                   <li><%= link_to "Back Home", root_path  %> </li> 
+
+                    <% end %>   
+                    
+            
                 </ul>
                 <!-- End Topbar Navigation -->
             </div>
@@ -65,7 +75,8 @@
                         <span class="fa fa-bars"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img id="logo-header" src="/assets/logo1-default.png" alt="Logo">
+                    
+                        <img id="logo-header" src="<%= r.logo %>" alt="Logo">
                     </a>
                 </div>
 
@@ -75,9 +86,10 @@
                         <!-- Home -->
                         <li class="dropdown active">
                             <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                                Home
+                                Home <!-- <li> <%= link_to 'Home', new_user_session_path %></li> -->
                             </a>
                             <ul class="dropdown-menu">
+
                                 <li><a href="index.html">Option 1: Default Page</a></li>
                                 <li><a target="_blank" href="One-Page/index.html">Option 2: One Page Template</a></li>                                
                                 <li><a href="page_home1.html">Option 3: Layer Slider</a></li>
@@ -524,4 +536,6 @@
         </div>            
         <!-- End Navbar -->
     </div>
+    <% end %>
+    <% end %>
     <!--=== End Header ===-->   
