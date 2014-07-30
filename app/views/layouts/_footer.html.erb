@@ -1,6 +1,5 @@
 
 <!--=== Footer Version 1 ===-->
-<% Home.all.each do |x| %>
     <div class="footer-v1">
         <div class="footer">
             <div class="container">
@@ -8,7 +7,7 @@
                     <!-- About -->
                     <div class="col-md-3 md-margin-bottom-40">
                         <a href="index.html"><img class="footer-logo" src="/assets/logo2-default.png" alt=""></a>
-                        <p><%= x.about %></p>
+                        <p><%= about_us("Escribe acerca de la empresa ","about")%></p>
                         <p></p>    
                     </div><!--/col-md-3-->
                     <!-- End About -->
@@ -52,12 +51,13 @@
                     <div class="col-md-3 map-img md-margin-bottom-40">
                         <div class="headline"><h2>Contact Us</h2></div>                         
                         <address class="md-margin-bottom-40">
-                        Dirección:
-                            <%= x.direccion %> <br />
-                            Telefono: <%= x.telefono %> <br />
-                            Fax: <%= x.fax %> <br />
-                            Email: <%= link_to x.email, root_path %>
+                        Dirección:<%= about_us("Escribe la direccion de la empresa","direccion")%><br />
+                            
+                            Telefono: <%= about_us("Escribe el telefono de la empresa","telefono")%><br />
+                            Fax:<%= about_us("Escribe el fax de la empresa","fax")%><br />
+                            Email:<%= about_us("Escribe el Eamil de la empresa","email")%>
                         </address>
+
                     </div><!--/col-md-3-->
                     <!-- End Address -->
                 </div>
@@ -90,6 +90,6 @@
     </div>     
     <!--=== End Footer Version 1 ===-->
 </div>
-<% end %>
+
 <!--/wrapper-->
 

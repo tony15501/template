@@ -26,18 +26,5 @@ class Home < ActiveRecord::Base
   validates_presence_of :logo
   validates_presence_of :slider
   
-	# def img_dimensions
-	# 	if logo.queued_for_write[:original] || slider.queued_for_write[:original]
-	# 		dimensions = Peperclip::Goemetry.from_file(logo.queued_for_write[:original].path)
-
-	#  		errors.add(:logo, "las medidas de la imagen deben ser 103 ancho 39 altura ") unless dimensions.height> 103|| dimensions.width> 39
-
-	#  			errors.add(:slider, "las medidas de la imagen deben ser 495 ancho 224 altura ") unless dimensions.height> 495|| dimensions.width> 224
-			
-	# 	else
-	# 		true
-	# 	end
-		
-	# end
 
 end
