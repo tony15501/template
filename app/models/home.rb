@@ -7,24 +7,24 @@ class Home < ActiveRecord::Base
   validates_attachment_content_type :logo, :content_type => /\Aimage\/.*\Z/
 
 
-  validates :promocional, uniqueness:{message: "No puede estar repetido"}, presence: {message: "el campo debe ser obligatorio"}
+  # validates :promocional, uniqueness:{message: "No puede estar repetido"}, presence: {message: "el campo debe ser obligatorio"}
 
  
-	# validates_attachment :logo,  :presence => true,
- #  :content_type => { :content_type => ["image/png", "image/jpeg", "image/jpg"] },
- #  :size => { :in => 0..1.megabytes}
+	validates_attachment :logo,  :presence => true,
+  :content_type => { :content_type => ["image/png", "image/jpeg", "image/jpg"] },
+  :size => { :in => 0..1.megabytes}
 
- #  validates_attachment :slider,  :presence => true,
- #  :content_type => { :content_type => ["image/png", "image/jpeg", "image/jpg"] },
- #  :size => { :in => 0..1.megabytes}
+  validates_attachment :slider,  :presence => true,
+  :content_type => { :content_type => ["image/png", "image/jpeg", "image/jpg"] },
+  :size => { :in => 0..1.megabytes}
 
  
 
- #  validates :logo, dimensions: { width: 103, height: 39 }
- #  validates :slider, dimensions: { width: 495, height: 224 }
+  validates :logo, dimensions: { width: 103, height: 39 }
+  validates :slider, dimensions: { width: 495, height: 224 }
 
- #  validates_presence_of :logo
- #  validates_presence_of :slider
+  validates_presence_of :logo
+  validates_presence_of :slider
   
 	# def img_dimensions
 	# 	if logo.queued_for_write[:original] || slider.queued_for_write[:original]

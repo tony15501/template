@@ -1,6 +1,6 @@
- <% if @homes %>
- <!--=== Footer Version 1 ===-->
- <% @homes.each do |p| %>
+
+<!--=== Footer Version 1 ===-->
+<% Home.all.each do |x| %>
     <div class="footer-v1">
         <div class="footer">
             <div class="container">
@@ -8,7 +8,8 @@
                     <!-- About -->
                     <div class="col-md-3 md-margin-bottom-40">
                         <a href="index.html"><img class="footer-logo" src="/assets/logo2-default.png" alt=""></a>
-                        <p> <%= p.about %></p> 
+                        <p><%= x.about %></p>
+                        <p></p>    
                     </div><!--/col-md-3-->
                     <!-- End About -->
 
@@ -51,16 +52,44 @@
                     <div class="col-md-3 map-img md-margin-bottom-40">
                         <div class="headline"><h2>Contact Us</h2></div>                         
                         <address class="md-margin-bottom-40">
-                            <%= p.direccion %> <br />
-                            
-                            Phone: <%= p.telefono %><br />
-                            Fax: <%= p.fax %> <br />
-                            Email: <%= link_to p.email, root_path %>
+                        Dirección:
+                            <%= x.direccion %> <br />
+                            Telefono: <%= x.telefono %> <br />
+                            Fax: <%= x.fax %> <br />
+                            Email: <%= link_to x.email, root_path %>
                         </address>
                     </div><!--/col-md-3-->
                     <!-- End Address -->
                 </div>
             </div> 
-        </div>
-        <% end %>
-        <% end %><!--/footer-->
+        </div><!--/footer-->
+
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">                     
+                        <p>
+                            2014 &copy; All Rights Reserved. Unify Theme by 
+                            <a target="_blank" href="https://twitter.com/htmlstream">Htmlstream</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                        </p>
+                    </div>
+                    <!-- Social Links -->
+                    <div class="col-md-6">  
+                        <ul class="social-icons pull-right">
+                            <li><a href="#" data-original-title="Facebook" class="rounded-x social_facebook"></a></li>
+                            <li><a href="#" data-original-title="Twitter" class="rounded-x social_twitter"></a></li>
+                            <li><a href="#" data-original-title="Goole Plus" class="rounded-x social_googleplus"></a></li>
+                            <li><a href="#" data-original-title="Linkedin" class="rounded-x social_linkedin"></a></li>
+                            <li><a href="#" data-original-title="Pinterest" class="rounded-x social_pintrest"></a></li>
+                        </ul>
+                    </div>
+                    <!-- End Social Links -->
+                </div>
+            </div> 
+        </div><!--/copyright-->
+    </div>     
+    <!--=== End Footer Version 1 ===-->
+</div>
+<% end %>
+<!--/wrapper-->
+
