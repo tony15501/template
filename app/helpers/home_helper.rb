@@ -1,7 +1,7 @@
 module HomeHelper
 
   def logo
-    logo_path = "/assets/logo1-default.png"
+    logo_path = "/assets/logo.png"
     logo_path = Home.first.logo if Home.first
     logo_path
   end

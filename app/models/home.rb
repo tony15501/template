@@ -1,5 +1,5 @@
 class Home < ActiveRecord::Base
-	 has_attached_file :logo, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/assets/logo1-default.png"
+	 has_attached_file :logo, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/assets/logo.png"
 
 	 has_attached_file :slider, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/assets/1.png"
 
