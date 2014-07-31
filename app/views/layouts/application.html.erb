@@ -13,25 +13,16 @@
 </head>
 <body>
 <%= params %>  <!--checo en que accion estoy--> 
-
-<!-- <p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p> -->
 <%= render 'layouts/header' %>
-<!-- <ul class="nav navbar-nav navbar-right">
-
-  <p class="navbar-text">Benvenido:
-      <li><% if user_signed_in? %></li>
-  <li class="navbar-text"> <%= current_user.email%></li>
-  <li><%= link_to 'Cerrar sesion', destroy_user_session_path, method: :delete %></li>
-  <% else %>
-  <li> <%= link_to "Rails Admin Dashboard", "/admin" %></li>
-
-  <% end %>
-</ul> -->
-
-
+ 
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+  
 <%= yield %>
+
 <%= render 'layouts/footer' %> 
+
 <script type="text/javascript">
 
     jQuery(window).load(function() {

@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+#encriptar contraseña
+gem 'bcrypt-ruby', '3.0.0'
 #WYSIWYG
 gem 'bootstrap-wysihtml5-rails', '0.3.1.24'
 #peperclip para suvir fotos
