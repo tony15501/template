@@ -14,9 +14,70 @@
  */
  
   @import "bootstrap";
+  /*Import Google Font*/
   @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
 
 
+ /* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+
+}
+
+
+/*Registration and Login Page v1
+------------------------------------*/
+.reg-page {
+  color: #555;
+  padding: 30px;
+  background: #fefefe;
+  border: solid 1px #eee;
+  box-shadow: 0 0 3px #eee;
+}
+
+/*Reg Header*/
+.reg-header {
+  color: #555;
+  text-align: center;
+  margin-bottom: 35px;
+  border-bottom: solid 1px #eee;
+}
+
+.reg-header h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/*Reg Forms*/
+.reg-page label {
+  color: #777;
+}
+
+
+
+
+input {
+  height: auto !important;
+}
 
 /*   
  * Template Name: Unify - Responsive Bootstrap Template
@@ -26,8 +87,36 @@
  * Website: http://htmlstream.com
 */
 
-/*Import Google Font*/
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+
+
+
+/*Registration and Login Page v1
+------------------------------------*/
+.reg-page {
+  color: #555;
+  padding: 30px;
+  background: #fefefe;
+  border: solid 1px #eee;
+  box-shadow: 0 0 3px #eee;
+}
+
+/*Reg Header*/
+.reg-header {
+  color: #555;
+  text-align: center;
+  margin-bottom: 35px;
+  border-bottom: solid 1px #eee;
+}
+
+.reg-header h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/*Reg Forms*/
+.reg-page label {
+  color: #777;
+}
 
 /*Reset Styles
 ------------------------------------*/
