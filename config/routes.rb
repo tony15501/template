@@ -1,8 +1,7 @@
 Template::Application.routes.draw do
   get "project/index"
   get "portfolio/index"
-  devise_for :users
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  #devise_for :users
   #get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

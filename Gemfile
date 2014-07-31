@@ -4,9 +4,9 @@ gem 'bootstrap-wysihtml5-rails', '0.3.1.24'
 #peperclip para suvir fotos
 gem "paperclip", "~> 4.1"
 #divise
-gem 'devise', '3.0.0'
+#gem 'devise', '3.0.0'
 #rails-admin
-gem 'rails_admin', '~> 0.6.2'
+#gem 'rails_admin', '~> 0.6.2'
 #bootstrap
 gem 'bootstrap-sass', '~> 3.1.0.0'
 gem 'sprockets', '~> 2.11.0'
