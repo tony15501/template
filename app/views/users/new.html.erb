@@ -6,7 +6,7 @@
 			<%= form_for(@user) do |f| %>
 			<%= render 'shared/error_messages', object: f.object %>
 			<%= f.label :name %>
-			<%= f.text_field :name, class: 'form-control margin-bottom-20', placeholder:"Email" %>
+			<%= f.text_field :name, class: 'form-control margin-bottom-20', placeholder:"Nombre" %>
 			<%= f.label :email %>
 			<%= f.text_field :email, :autofocus => false, class: 'form-control margin-bottom-20', placeholder:"Email" %>
 			<%= f.label :password %>
