@@ -1,9 +1,12 @@
 Template::Application.routes.draw do
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
   #get "users/new"
   get "project/index"
   get "portfolio/index"
-  match '/signup',  to: 'users#new', via: 'get'
+  match '/signup',  to: 'users#new',            via: 'get'
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
   #devise_for :users
   #get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
