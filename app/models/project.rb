@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base
-	belongs_to :category
+	belongs_to :division
 
 	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/assets/255x161.png"
 	

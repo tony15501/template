@@ -18,12 +18,13 @@
       <%= f.label :password_confirmation, "Confirmar contraseña" %>
       <%= f.password_field :password_confirmation, :class => "form-control margin-bottom-20" %></br></br>
       <div class="col-lg-5 text-right">
+      
         <% if params[:action] ==  "new" || params[:action] == "create"%>
         <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
           
       <%else%>
 
-      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Save changes",  class: "btn btn-large btn-primary" %>
 
       <%end%>
       </div>
