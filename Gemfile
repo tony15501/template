@@ -2,9 +2,9 @@ source 'https://rubygems.org'
 #encriptar contraseña
 gem 'bcrypt-ruby', '3.0.0'
 #WYSIWYG
-gem 'bootstrap-wysihtml5-rails', '0.3.1.24'
+#gem 'bootstrap-wysihtml5-rails', '0.3.1.24'
 #peperclip para suvir fotos
-gem "paperclip", "~> 4.1"
+#gem "paperclip", "~> 4.1"
 #divise
 #gem 'devise', '3.0.0'
 #rails-admin
@@ -21,6 +21,7 @@ gem 'rails', '4.0.0'
 
 group :development do
   gem 'sqlite3', '1.3.8'
+  gem 'rspec-rails', '2.13.1'
 end
 
 gem 'sass-rails', '4.0.1'

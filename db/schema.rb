@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140801000851) do
+ActiveRecord::Schema.define(version: 20140801230307) do
+
+  create_table "abouts", force: true do |t|
+    t.string   "title"
+    t.text     "about_us"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -19,24 +26,42 @@ ActiveRecord::Schema.define(version: 20140801000851) do
     t.datetime "updated_at"
   end
 
+  create_table "divisions", force: true do |t|
+    t.string   "name"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "homes", force: true do |t|
-    t.string   "logo_file_name"
-    t.string   "logo_content_type"
-    t.integer  "logo_file_size"
-    t.datetime "logo_updated_at"
-    t.string   "slider_file_name"
-    t.string   "slider_content_type"
-    t.integer  "slider_file_size"
-    t.datetime "slider_updated_at"
+    t.string   "logo"
+    t.string   "slider_image_one"
+    t.string   "slider_title_one"
+    t.text     "slider_text_one"
+    t.string   "slider_image_two"
+    t.string   "slider_title_two"
+    t.text     "slider_text_two"
+    t.string   "slider_image_three"
+    t.string   "slider_title_three"
+    t.text     "slider_text_three"
     t.text     "promocional"
-    t.text     "servicio1"
-    t.text     "servicio2"
-    t.text     "servicio3"
     t.string   "about"
-    t.integer  "telefono"
+    t.string   "address"
+    t.integer  "telephone"
     t.integer  "fax"
     t.string   "email"
-    t.string   "direccion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "maps", force: true do |t|
+    t.string   "name"
+    t.string   "adress"
+    t.string   "city"
+    t.string   "country"
+    t.string   "street"
+    t.integer  "altitude"
+    t.integer  "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -44,11 +69,25 @@ ActiveRecord::Schema.define(version: 20140801000851) do
   create_table "projects", force: true do |t|
     t.string   "title"
     t.text     "content"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.integer  "category_id"
+    t.string   "image"
+    t.integer  "division_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "services", force: true do |t|
+    t.string   "icon"
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "time_lines", force: true do |t|
+    t.text     "content"
+    t.string   "title"
+    t.date     "date"
+    t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

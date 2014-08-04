@@ -1,17 +1,23 @@
 class CreateHomes < ActiveRecord::Migration
   def change
     create_table :homes do |t|
-      t.attachment :logo
-      t.attachment :slider
-      t.text :promocional
-      t.text :servicio1
-      t.text :servicio2
-      t.text :servicio3
+      t.string :logo
+      t.string :slider_image_one
+      t.string :slider_title_one
+      t.text   :slider_text_one
+      t.string :slider_image_two
+      t.string :slider_title_two
+      t.text   :slider_text_two
+      t.string :slider_image_three
+      t.string :slider_title_three
+      t.text   :slider_text_three
+      t.text   :promocional
       t.string :about
-      t.integer :telefono
+      t.string :address
+      t.integer :telephone
       t.integer :fax
       t.string :email
-      t.string :direccion
+      
 
       t.timestamps
     end
