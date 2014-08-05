@@ -22,6 +22,8 @@ gem 'rails', '4.0.0'
 group :development,:test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
+  gem 'shoulda-matchers', '~> 2.6.2'
+  gem 'shoulda-matchers-callbacks', '~> 0.0.1'
 end
 
 gem 'sass-rails', '4.0.1'
